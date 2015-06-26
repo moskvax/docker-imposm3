@@ -12,4 +12,4 @@ RUN go get github.com/tools/godep
 RUN git clone https://github.com/omniscale/imposm3 src/github.com/omniscale/imposm3
 RUN cd src/github.com/omniscale/imposm3 && godep go install ./...
 
-CMD ["imposm3"]
+ENTRYPOINT ["imposm3"]
