@@ -1,9 +1,9 @@
 FROM golang:1.4
+MAINTAINER Stephen Caraher <moskvax@gmail.com>
 
 RUN apt-get update && apt-get install -y \
       libprotobuf-dev libleveldb-dev libgeos-dev \
-      --no-install-recommends \
-    && rm -rf /var/lib/apt/lists/*
+      --no-install-recommends
 
 RUN ln -s /usr/lib/libgeos_c.so /usr/lib/libgeos.so
 
